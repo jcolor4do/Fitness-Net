@@ -1,0 +1,168 @@
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] FitnessNet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FitnessNet.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FitnessNet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App"
+                                asp-action="Inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="py-5 d-flex justify-content-center">
+            <div class="col-10 col-md-6">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="datos_generales-tab" data-bs-toggle="tab"
+                            data-bs-target="#datos_generales" type="button" role="tab" aria-controls="datos_generales"
+                            aria-selected="true">1 - Datos generales</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="datos_corporales-tab" data-bs-toggle="tab"
+                            data-bs-target="#datos_corporales" type="button" role="tab" aria-controls="datos_corporales"
+                            aria-selected="false">2 - Datos corporales</button>
+                    </li>
+                </ul>
+
+                <form method="POST">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="datos_generales" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <div class="pt-3">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="user">Usuario</label>
+                                    <input required type="text" id="user" class="form-control" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input required type="email" id="email" class="form-control" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="pass">Contraseña</label>
+                                    <input required type="password" id="pass" class="form-control" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="pass_confirm">Confirmar contraseña</label>
+                                    <input required type="password" id="pass_confirm" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="datos_corporales" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="pt-3">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="peso">Peso (kg)</label>
+                                    <div class="input-group mb-3">
+                                        <input required type="number" id="peso" class="form-control"
+                                            aria-label="Peso en kilogramos" min="20" max="500">
+                                        <span class="input-group-text">kg</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="peso">Estatura (cm)</label>
+                                    <div class="input-group mb-3">
+                                        <input required type="number" id="estatura" class="form-control"
+                                            aria-label="Estatura en centímetros" min="50" max="300">
+                                        <span class="input-group-text">cm</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="input-group mb-4">
+                                    <label class="input-group-text" for="genero">Género</label>
+                                    <select required class="form-select" id="genero">
+                                        <option selected>Selecciona...</option>
+                                        <option value="1">Femenino</option>
+                                        <option value="2">Masculino</option>
+                                        <option value="3">Otro</option>
+                                    </select>
+                                </div>
+
+                                
+                                 <div class="input-group mb-4">
+                                    <label class="input-group-text" for="complexion">Complexión</label>
+                                    <select required class="form-select" id="complexion">
+                                        <option selected>Selecciona...</option>
+                                        <option value="1">Chica</option>
+                                        <option value="2">Mediana</option>
+                                        <option value="3">Grande</option>
+                                    </select>
+                                </div>
+
+                                  <div class="input-group mb-4">
+                                    <label class="input-group-text" for="meta">Mi meta es...</label>
+                                    <select required class="form-select" id="meta">
+                                        <option selected>Selecciona...</option>
+                                        <option value="1">Perder peso</option>
+                                        <option value="2">Aumentar masa muscular</option>
+                                        <option value="3">Tonificar</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Guardar com mi rutina" class="text-center btn btn-primary" />
+                    <input type="submit" value="Restablecer parametros iniciales" class="text-center btn btn-primary" />
+
+                    <div class="py-4">
+                        <hr>
+                    </div>
+
+                </form>
+                
+            </div>
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">&copy; 2023 - FitnessNet</div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+
+</html>
