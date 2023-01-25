@@ -39,6 +39,11 @@ namespace FitnessApp.Controllers
             return View();
         }
 
+         public IActionResult DatosEjercicio()
+        {
+        return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
