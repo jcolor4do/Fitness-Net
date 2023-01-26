@@ -11,6 +11,12 @@ namespace FitnessApp.Data
     {
         public DbSet<Ejercicio> Ejercicos { get; set; }
         public DbSet<Persona> Personas { get; set; }
+
+        public DbSet<Circuito> Circuito { get; set; }  
+        public DbSet<Rutina> Rutinas { get; set; }  
+        public DbSet<Avance> Avances { get; set; }
+        public DbSet<SeriesAvance> SeriesAvances { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

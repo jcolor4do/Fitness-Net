@@ -30,8 +30,46 @@ namespace FitnessApp.Controllers
             var x = dbContext.Ejercicos.Where(x => x.Id == 1).FirstOrDefault();
             return View();
         }
+        //login
         public IActionResult Login() => View();
+        //registrar
         public IActionResult SingIn() => View();
+        /// <summary>
+        /// /pendiete::::::::::
+        /// public IActionResult UpdateUser() => View();
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <returns></returns>
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateUser(Persona persona)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                dbContext.Entry(persona).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                await dbContext.SaveChangesAsync();
+                return RedirectToAction("Atleta");
+            }
+            return Unauthorized();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel modelo)
+        {
+            if (!ModelState.IsValid) return View(modelo);
+            var result = await signInManager.PasswordSignInAsync(modelo.Email, modelo.Password, modelo.Recuerdame, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Nombre de usuario o password incorrecto.");
+                return View(modelo);
+            }
+        }
+
+
 
         [HttpPost]
         public async Task<IActionResult> SingIn(SingInModel modelo)
@@ -68,6 +106,16 @@ namespace FitnessApp.Controllers
                 return View(modelo);
             }
 
+        }
+
+        public IActionResult UpdateUser()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var claim = User.Claims.Where(x => x.Type.Equals("TenandID")).Select(x => x.Value).FirstOrDefault();
+                return View(dbContext.Personas.Where(x => x.idUsuario.Equals(claim)).FirstOrDefault());
+            }
+            return RedirectToAction("Index", "Home");
         }
 
     }

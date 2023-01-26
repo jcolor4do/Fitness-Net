@@ -1,0 +1,43 @@
+﻿@model FitnessApp.Models.InsertarAvancesModel
+
+@{
+    ViewData["Title"] = "InsertarAvances";
+}
+
+<h1>InsertarAvances</h1>
+
+<h4>InsertarAvances</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertarAvances">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idAvance" class="control-label"></label>
+                <input asp-for="idAvance" class="form-control" />
+                <span asp-validation-for="idAvance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fecha" class="control-label"></label>
+                <input asp-for="fecha" class="form-control" />
+                <span asp-validation-for="fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idSerieAvance" class="control-label"></label>
+                <input asp-for="idSerieAvance" class="form-control" />
+                <span asp-validation-for="idSerieAvance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
