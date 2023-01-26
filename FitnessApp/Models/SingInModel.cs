@@ -9,6 +9,8 @@ namespace FitnessApp.Models
 {
     public class SingInModel : Persona 
     {
+      
+
         [Required]
         [EmailAddress]
         public string Email { get; set; } = null!;
