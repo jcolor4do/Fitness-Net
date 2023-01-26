@@ -11,6 +11,7 @@ namespace FitnessApp.Data.Entities
         [Key]
         public int Id { get; set; }
         public string idUsuario { get; set; }
+        public string password { get; set; }
         public String nombre { get; set; }
         public int edad { get; set; }
         public String correo { get; set; }
