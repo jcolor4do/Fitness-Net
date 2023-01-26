@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\FitnessApp.csproj": {}
+    "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\FitnessApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\FitnessApp.csproj": {
+    "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\FitnessApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\FitnessApp.csproj",
+        "projectUniqueName": "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\FitnessApp.csproj",
         "projectName": "FitnessApp",
-        "projectPath": "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\FitnessApp.csproj",
+        "projectPath": "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\FitnessApp.csproj",
         "packagesPath": "C:\\Users\\yakic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\obj\\",
+        "outputPath": "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yakic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -57,6 +57,10 @@
               "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.Extensions.FileProviders.Embedded": {
               "target": "Package",
               "version": "[5.0.12, )"
             },

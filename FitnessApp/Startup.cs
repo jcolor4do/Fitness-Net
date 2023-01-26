@@ -55,12 +55,16 @@ namespace FitnessApp
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-          //  app.UseStaticFiles(new StaticFileOptions
-            //{
-              //  FileProvider = new PhysicalFileProvider(
-            //       Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
-          //      RequestPath = "/StaticFiles"
-         //   });
+
+           
+
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                   Path.Combine(Directory.GetCurrentDirectory(), @"MyStaticFiles")),
+                RequestPath = new Microsoft.AspNetCore.Http.PathString("/StaticFiles")
+            });
 
 
             app.UseRouting();

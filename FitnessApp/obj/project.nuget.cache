@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EvTQsS9P+tm7qsnWZNit4v2VVik57klSCX/mpxMBo99dwgz8uoOU3SczheqlEifouTQfqyLf/VCzGuk9IiVI/A==",
+  "dgSpecHash": "NB/dnrg1Fog0R8kJwwLN8vwIbrI5AMlneoA9U31QhhTIuXjNjWWbR62lCYuEMuCBQT6IYlzw30OGmt4Xz//fmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yakic\\source\\repos\\Fitness\\FitnessApp\\FitnessApp.csproj",
+  "projectFilePath": "C:\\Users\\yakic\\Desktop\\proyecto finaaaaaal\\FitnessApp\\FitnessApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yakic\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yakic\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
